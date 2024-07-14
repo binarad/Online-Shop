@@ -10,25 +10,19 @@ const Card: React.FC<CardProps> = ({
   productQuantity,
   productImg,
 }) => {
-  
-  //window.scrollY ==== 600
-
   return (
-    <a
-      href="#Product Info"
-      className="h-[400px] w-[300px] items-center justify-center flex flex-col m-[10px] p-[2.5px] border border-[#D9D9D9] rounded-lg"
-    >
+    <div className="h-[400px] w-[300px] items-center justify-center flex flex-col m-[10px] p-[2.5px] border border-[#D9D9D9] rounded-lg">
       <img
         src={productImg}
         alt="img"
         className="h-[250px] w-[250px] aspect-square"
       />
-      <div className="m-2 flex flex-col w-[220px] justify-center">
+      <div className="m-2 flex flex-col w-[220px] justify-center ">
         <p className="">{productName}</p>
         <p className="font-bold">${productPrice}</p>
         <p className="text-[12px]">Quantity: {productQuantity}</p>
       </div>
-    </a>
+    </div>
   );
 };
 
