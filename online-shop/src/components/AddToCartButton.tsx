@@ -9,7 +9,7 @@ interface ButtonProps {
 	small?: boolean
 	custom?: string
 	icon?: IconType
-	onClick: (e: React.MouseEventHandler<HTMLButtonElement>) => void
+	onClick?: () => void
 }
 
 const AddToCartButton: React.FC<ButtonProps> = ({
@@ -21,8 +21,10 @@ const AddToCartButton: React.FC<ButtonProps> = ({
 	icon: Icon,
 	onClick,
 }) => {
+	const [isAddedToCart, setIsAddedToCart] = React.useState(false)
 	return (
 		<button
+			onClick={onClick}
 			disabled={disabled}
 			className={`
         disabled:opacity-70 

@@ -19,6 +19,7 @@ function HomePage() {
 	const [hasMore, setHasMore] = useState<boolean>(true)
 	const itemPerPage = 20
 
+	// Fetch data
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
