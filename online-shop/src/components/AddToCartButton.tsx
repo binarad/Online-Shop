@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { useState } from 'react'
 import { IconType } from 'react-icons'
 
 interface ButtonProps {
@@ -21,7 +21,7 @@ const AddToCartButton: React.FC<ButtonProps> = ({
 	icon: Icon,
 	onClick,
 }) => {
-	const [isAddedToCart, setIsAddedToCart] = React.useState(false)
+	const [isAddedToCart, setIsAddedToCart] = useState<boolean>(false)
 	return (
 		<button
 			onClick={onClick}
