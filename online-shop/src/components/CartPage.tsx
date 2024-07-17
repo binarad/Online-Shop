@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import { MdArrowBack } from 'react-icons/md'
 export default function CartPage() {
 	return (
-		<div className='w-full flex flex-col'>
+		<div className='w-full flex flex-col '>
 			<Header />
-			<div className=' flex flex-col items-center justify-center m-10'>
+			<div className='flex flex-col items-center justify-center m-10'>
 				<span className='text-3xl font-bold'>Your cart is empty</span>
 				<Link
 					to={'/'}
