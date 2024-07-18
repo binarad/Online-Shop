@@ -5,10 +5,17 @@ import { ProductType } from '../HomePage'
 import AddToCartButton from './AddToCartButton'
 const ProductPage = () => {
 	const [data, setData] = useState<ProductType[]>([])
+	const [isAddedToCart, setIsAddedToCart] = useState<boolean>(false)
 	const [cart, setCart] = useState<ProductType[]>([])
 
 	const addToCart = (product: ProductType) => {
-		setCart([...cart, product])
+		setIsAddedToCart(true)
+		console.log(cart)
+		if (isAddedToCart) {
+			console.log(`2 ${isAddedToCart}`)
+			setCart([...cart, product])
+			console.log(cart)
+		}
 	}
 
 	useEffect(() => {

@@ -1,7 +1,19 @@
 import Header from './Header'
 import { Link } from 'react-router-dom'
 import { MdArrowBack } from 'react-icons/md'
-export default function CartPage() {
+import { ProductType } from '../HomePage'
+import { useState } from 'react'
+
+export default function CartPage(
+	isAddedToCart: boolean,
+	product: ProductType[]
+) {
+	const [cart, setCart] = useState<ProductType[]>([])
+
+	if (isAddedToCart) {
+		setCart(product)
+	}
+
 	return (
 		<div className='w-full flex flex-col '>
 			<Header />
