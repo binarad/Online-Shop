@@ -4,21 +4,18 @@ import { MdArrowBack } from 'react-icons/md'
 import { ProductType } from '../HomePage'
 import { useState } from 'react'
 
-export default function CartPage(
-	isAddedToCart: boolean,
-	product: ProductType[]
-) {
+export default function CartPage() {
 	const [cart, setCart] = useState<ProductType[]>([])
 
-	if (
-		isAddedToCart &&
-		product !== null &&
-		product !== undefined &&
-		product.length > 0
-	) {
-		setCart(product)
-		console.log(cart)
-	}
+	// if (
+	// 	isAddedToCart &&
+	// 	product !== null &&
+	// 	product !== undefined &&
+	// 	product.length > 0
+	// ) {
+	// 	setCart(product)
+	// 	console.log(cart)
+	// }
 
 	if (cart.length <= 0) {
 		console.log(cart.length)

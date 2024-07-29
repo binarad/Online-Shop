@@ -8,8 +8,7 @@ const ProductPage = () => {
 	const [isAddedToCart, setIsAddedToCart] = useState<boolean>(false)
 	const [cart, setCart] = useState<ProductType[]>([])
 
-	// TODO: УЗНАТЬ У ПАШИ КАК ДОБАВИТЬ МАССИВ НА СТРАНИЦУ КОРЗИНЫ
-
+	// TODO: УЗНАТЬ У ПАШИ КАК ДОБАВИТЬ МАССИВ НА СТРАНИЦУ КОРЗИН
 	const addToCart = (product: ProductType) => {
 		setIsAddedToCart(true)
 		if (isAddedToCart) {
