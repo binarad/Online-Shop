@@ -1,7 +1,7 @@
 import Header from './Header'
 import { Link } from 'react-router-dom'
 import { MdArrowBack } from 'react-icons/md'
-import { ProductType } from '../HomePage'
+import { ProductType } from './HomePage'
 import { useState } from 'react'
 
 export default function CartPage() {

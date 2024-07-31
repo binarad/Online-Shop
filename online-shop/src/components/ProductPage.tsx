@@ -1,7 +1,7 @@
 import { useParams } from 'react-router'
 import Header from './Header'
 import { useEffect, useState } from 'react'
-import { ProductType } from '../HomePage'
+import { ProductType } from './HomePage'
 import AddToCartButton from './AddToCartButton'
 const ProductPage = () => {
 	const [data, setData] = useState<ProductType[]>([])

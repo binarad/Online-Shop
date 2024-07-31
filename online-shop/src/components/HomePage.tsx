@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Card from "./components/Card.tsx";
-import Header from "./components/Header.tsx";
+import Card from "./Card.tsx";
+//import Header from './Header.tsx'
 import InfiniteScroll from "react-infinite-scroll-component";
 import { Link } from "react-router-dom";
 
@@ -56,7 +56,6 @@ function HomePage() {
 
   return (
     <div className="w-full flex flex-col items-center">
-      <Header />
       <div className="flex flex-wrap justify-start w-[1280px]">
         <InfiniteScroll
           dataLength={data.length}
