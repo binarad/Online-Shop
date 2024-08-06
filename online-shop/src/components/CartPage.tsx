@@ -56,12 +56,20 @@ export default function CartPage() {
 				<div className='mt-4 flex flex-row justify-end'>
 					<strong>Total: ${cartTotal.toFixed(2)}</strong>
 				</div>
-				<button
-					onClick={clearCart}
-					className='mt-4 bg-red-500 text-white p-2 rounded-md hover:bg-red-600 w-1/5 self-end'
-				>
-					Clear Cart
-				</button>
+				<div className='flex flex-row justify-between'>
+					<Link
+						to='/'
+						className='mt-4 bg-slate-500 w-1/5 text-white p-2 rounded-md hover:bg-slate-600 text-center'
+					>
+						<button>Continue Shopping</button>
+					</Link>
+					<button
+						onClick={clearCart}
+						className='mt-4 bg-red-500 text-white text-center p-2 rounded-md hover:bg-red-600 w-1/5 self-end'
+					>
+						Clear Cart
+					</button>
+				</div>
 			</div>
 		</div>
 	)
