@@ -37,7 +37,7 @@ export default function CartPage() {
 	}
 
 	const cartTotal = cart.reduce((acc, current) => acc + current.price, 0)
-
+	console.log(cartTotal)
 	return (
 		<div className='w-full flex flex-col '>
 			<Header />

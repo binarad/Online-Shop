@@ -9,16 +9,24 @@ const ProductPage = () => {
 	const [cart, setCart] = useState<ProductType[]>([])
 
 	// TODO: УЗНАТЬ У ПАШИ КАК ДОБАВИТЬ МАССИВ НА СТРАНИЦУ КОРЗИН
-	const addToCart = (product: ProductType) => {
-		setIsAddedToCart(true)
-		if (isAddedToCart) {
-			setCart([...cart, product])
-			if (cart.length >= 1 && cart.length > 0) {
-				setIsAddedToCart(false)
-				console.log(`2 ${isAddedToCart}`)
-			}
-			console.log(cart)
+	const addToCart = (product: ProductType | undefined) => {
+		if (!product) return
+		if (cart.length == 1) {
+			setIsAddedToCart(false)
+			console.log(cart.map(item => console.log(item)))
 		}
+
+		setIsAddedToCart(true)
+		setCart([...cart, product])
+		// if (isAddedToCart) {
+		// 	setCart( [...cart, product])
+		// 	// setCart([...cart, product])
+		// 	if (cart.length >= 1 && cart.length > 0) {
+		// 		setIsAddedToCart(false)
+		// 		console.log(`2 ${isAddedToCart}`)
+		// 	}
+		// 	console.log(cart)
+		// }
 	}
 
 	useEffect(() => {
