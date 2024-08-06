@@ -1,9 +1,14 @@
 import MainLogo from '../assets/main-logo-black-transparent.png'
 import CartLogo from '../assets/bxs-cart.svg'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useCart } from './CartContext'
+
 const Header = () => {
-	const [productQuantity, setProductQuantity] = useState<number>(0)
+	const { cart } = useCart()
+	const productQuantity = cart.reduce(
+		(total, product) => total + product.quantity,
+		0
+	)
 	return (
 		<div className='flex h-[65px] w-full flex-row justify-center items-center px-[16px] border-b border-[#D9D9D9] bg-[#FFFFFF] gap-6 box-border flex-none order-none self-stretch flex-grow-1'>
 			<Link

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react'
+import { createContext, useContext, useState, ReactNode } from 'react'
 import { ProductType } from '../App'
 
 interface CartContextType {
@@ -16,4 +16,30 @@ export const useCart = () => {
 		throw new Error('useCart must be used within a CartContextProvider')
 	}
 	return context
+}
+
+export const CartProvider = ({ children }: { children: ReactNode }) => {
+	const [cart, setCart] = useState<ProductType[]>([])
+
+	const addToCart = (product: ProductType) => {
+		setCart(prevCart => [...prevCart, product])
+	}
+
+	const removeFromCart = (productName: string) => {
+		setCart(prevCart =>
+			prevCart.filter(product => product.name !== productName)
+		)
+	}
+
+	const clearCart = () => {
+		setCart([])
+	}
+
+	return (
+		<CartContext.Provider
+			value={{ cart, addToCart, removeFromCart, clearCart }}
+		>
+			{children}
+		</CartContext.Provider>
+	)
 }
