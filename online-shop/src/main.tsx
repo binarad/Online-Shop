@@ -8,6 +8,7 @@ import Error404Page from './components/Error404Page.tsx'
 import ProductPage from './components/ProductPage.tsx'
 import App from './App.tsx'
 import { CartProvider } from './components/CartContext.tsx'
+import QuantityCounter from './components/QuantityCounter.tsx'
 
 const router = createBrowserRouter([
 	{
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
 	{
 		path: '/products/:productId',
 		Component: ProductPage,
+	},
+	{
+		path: '/quantityCounter',
+		Component: QuantityCounter,
 	},
 ])
 

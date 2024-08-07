@@ -22,8 +22,23 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 	const [cart, setCart] = useState<ProductType[]>([])
 
 	const addToCart = (product: ProductType) => {
-		setCart(prevCart => [...prevCart, product])
+		setCart(prevCart => {
+			const existingProduct = prevCart.find(item => item.name === product.name)
+
+			if (existingProduct) {
+				return prevCart.map(item =>
+					item.name === product.name
+						? { ...item, quantity: item.quantity + 1 }
+						: item
+				)
+			} else {
+				return [...prevCart, { ...product, quantity: 1 }]
+			}
+		})
 	}
+	// const addToCart = (product: ProductType) => {
+	// 	setCart(prevCart => [...prevCart, product])
+	// }
 
 	const removeFromCart = (productName: string) => {
 		setCart(prevCart =>

@@ -14,7 +14,6 @@ const AddToCartButton: React.FC<ButtonProps> = ({
 	onClick,
 }) => {
 	const [isAddedToCart, setIsAddedToCart] = useState<boolean>(false)
-
 	const handleClick = () => {
 		if (onClick) {
 			onClick()
@@ -25,6 +24,7 @@ const AddToCartButton: React.FC<ButtonProps> = ({
 
 	useEffect(() => {
 		if (isAddedToCart) {
+			alert('Product added to cart')
 			const timer = setTimeout(() => setIsAddedToCart(false), 2000)
 			return () => clearTimeout(timer)
 		}
