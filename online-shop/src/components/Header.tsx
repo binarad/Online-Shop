@@ -10,7 +10,7 @@ const Header = () => {
 		0
 	)
 	return (
-		<div className='flex h-[65px] w-full flex-row justify-center items-center px-[16px] border-b border-[#D9D9D9] bg-[#FFFFFF] gap-6 box-border flex-none order-none self-stretch flex-grow-1'>
+		<div className='flex h-[65px] w-full flex-row justify-center items-center px-[32px] border-b border-[#D9D9D9] bg-[#FFFFFF] gap-6 box-border flex-none order-none self-stretch flex-grow-1'>
 			<Link
 				to='/'
 				className='w-[40px] h-[40px] flex flex-row items-center flex-none order-none grow-0 mr-auto'
@@ -18,11 +18,11 @@ const Header = () => {
 				<img src={MainLogo} className='h-full w-full' />
 			</Link>
 
-			<input
+			{/* <input
 				className='w-[600px] h-[35px] rounded-md border border-[#D9D9D9] p-2'
 				type='text'
 				placeholder='Search your product'
-			/>
+			/> */}
 			<Link
 				to='/cartPage'
 				className='ml-auto w-[40px] h-[40px] relative flex justify-center items-center'
