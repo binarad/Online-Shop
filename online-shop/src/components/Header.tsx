@@ -18,11 +18,6 @@ const Header = () => {
 				<img src={MainLogo} className='h-full w-full' />
 			</Link>
 
-			{/* <input
-				className='w-[600px] h-[35px] rounded-md border border-[#D9D9D9] p-2'
-				type='text'
-				placeholder='Search your product'
-			/> */}
 			<Link
 				to='/cartPage'
 				className='ml-auto w-[40px] h-[40px] relative flex justify-center items-center'
